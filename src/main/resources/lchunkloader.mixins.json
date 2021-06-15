@@ -1,0 +1,16 @@
+{
+    "required": true,
+    "package": "net.literally.chunk.loader.mixin",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+        "ChunkTicketManagerInvoker",
+        "ChunkTicketTypeAccessor",
+        "ThreadedAnvilChunkStorageInvoker",
+        "MinecraftServerMixin"
+    ],
+    "client": [
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

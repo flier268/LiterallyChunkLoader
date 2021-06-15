@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": {"model": "lchunkloader:block/chunk_loader_on"},
+        "facing=south": {"model": "lchunkloader:block/chunk_loader_on", "y": 180},
+        "facing=west": {"model": "lchunkloader:block/chunk_loader_on", "y": 270},
+        "facing=east": {"model": "lchunkloader:block/chunk_loader_on", "y": 90}
+    }
+}

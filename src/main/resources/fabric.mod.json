@@ -1,0 +1,38 @@
+{
+    "schemaVersion": 1,
+    "id": "lchunkloader",
+    "version": "${version}",
+    "name": "Literally Chunk Loader",
+    "description": "This is an actual Chunk Loader",
+    "authors": [
+        "t_r_a_t"
+    ],
+    "contact": {
+        "homepage": "https://github.com/tratteo/LiterallyChunkLoader-1.15/wiki",
+        "sources": "https://github.com/tratteo/LiterallyChunkLoader-1.16",
+        "issues": "https://github.com/tratteo/LiterallyChunkLoader-1.16/issues"
+    },
+    "icon": "assets/lchunkloader/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "net.literally.chunk.loader.loaders.LCLLoader"
+        ],
+        "client": [
+            "net.literally.chunk.loader.loaders.LCLClientLoader"
+        ]
+    },
+    "depends": {
+        "fabricloader": ">=0.11.3",
+        "fabric": "*",
+        "minecraft": "1.17.x",
+        "java": ">=16"
+    },
+    "suggests": {
+        "flamingo": "*"
+    },
+    "mixins": [
+        "lchunkloader.mixins.json"
+    ],
+    "accessWidener": "lchunkloader.accesswidener"
+}
