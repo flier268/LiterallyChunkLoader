@@ -37,7 +37,6 @@ public final class LCLCommands
     {
         public static void define(CommandDispatcher<ServerCommandSource> dispatcher)
         {
-            ArrayList<String> launchersList = new ArrayList<>();
             dispatcher.register(CommandManager.literal("lclocate")
                   .then(CommandManager.argument("dimension", word()).suggests(suggestedStrings())
                         .executes(ctx ->

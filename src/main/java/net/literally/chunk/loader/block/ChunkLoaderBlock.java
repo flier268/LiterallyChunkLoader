@@ -72,7 +72,7 @@ public class ChunkLoaderBlock extends BlockWithEntity
             LongSet set = serverWorld.getForcedChunks();
             ArrayList<SerializableChunkPos> longs = new ArrayList<>();
             SerializableChunkPos chunk = new SerializableChunkPos(pos, world.getRegistryKey().getValue().getPath());
-            Iterator<Long> it = set.stream().iterator();
+            Iterator<Long> it = set.longStream().iterator();
             while(it.hasNext())
             {
                 long longPos = it.next();

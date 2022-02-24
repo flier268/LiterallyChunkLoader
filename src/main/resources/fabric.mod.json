@@ -8,9 +8,9 @@
         "t_r_a_t"
     ],
     "contact": {
-        "homepage": "https://github.com/tratteo/LiterallyChunkLoader-1.15/wiki",
-        "sources": "https://github.com/tratteo/LiterallyChunkLoader-1.16",
-        "issues": "https://github.com/tratteo/LiterallyChunkLoader-1.16/issues"
+        "homepage": "https://github.com/tratteo/LiterallyChunkLoader/wiki",
+        "sources": "https://github.com/tratteo/LiterallyChunkLoader",
+        "issues": "https://github.com/tratteo/LiterallyChunkLoader/issues"
     },
     "icon": "assets/lchunkloader/icon.png",
     "environment": "*",
@@ -24,9 +24,7 @@
     },
     "depends": {
         "fabricloader": ">=0.11.3",
-        "fabric": "*",
-        "minecraft": "1.17.x",
-        "java": ">=16"
+        "fabric": "*"
     },
     "suggests": {
         "flamingo": "*"

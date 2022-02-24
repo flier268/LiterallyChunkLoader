@@ -1,5 +1,6 @@
 package net.literally.chunk.loader.initializer;
-import com.mojang.datafixers.util.Either;
+import java.util.Optional;
+
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.literally.chunk.loader.mixin.ChunkTicketManagerInvoker;
 import net.literally.chunk.loader.mixin.ChunkTicketTypeAccessor;
@@ -13,8 +14,6 @@ import net.minecraft.util.profiler.Profiler;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.chunk.ChunkSection;
 import net.minecraft.world.chunk.WorldChunk;
-
-import java.util.Optional;
 
 public final class LCLTicker
 {
@@ -63,7 +62,7 @@ public final class LCLTicker
                 return;
             }
             
-            Optional<WorldChunk> optionalWorldChunk = ((Either) chunkHolder.getTickingFuture().getNow(ChunkHolder.UNLOADED_WORLD_CHUNK)).left();
+            Optional<WorldChunk> optionalWorldChunk = chunkHolder.getTickingFuture().getNow(ChunkHolder.UNLOADED_WORLD_CHUNK).left();
             if(!optionalWorldChunk.isPresent())
             {
                 return;
@@ -77,7 +76,7 @@ public final class LCLTicker
                 int startZ = chunk.getPos().getStartZ();
                 for(ChunkSection chunkSection : chunk.getSectionArray())
                 {
-                    if(chunkSection != WorldChunk.EMPTY_SECTION && chunkSection.hasRandomTicks())
+                    if(chunkSection.isEmpty() == false && chunkSection.hasRandomTicks())
                     {
                         int yOffset = chunkSection.getYOffset();
                         for(int m = 0; m < randomTickSpeed; m++)
